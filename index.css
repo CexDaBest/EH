@@ -28,14 +28,6 @@
     height: auto;       /* se ajusta al contenido */
 }
 
-@media screen and (max-width:600px) {
-    * {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 nav {
     display: flex;
     justify-content: space-evenly; /* Distribuye los links */
