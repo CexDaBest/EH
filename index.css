@@ -217,18 +217,39 @@ nav a.item.active {
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 475px;
     border: 5px solid black;
     display: block;
     border-radius: 5px;
+    max-width: 100%; /* Para que no se salga */
+    height: auto; /* mantiene la proporción de la altura fija */
 }
 
 .gif {
-    background-color: white;
     display: flex; /* CAMBIO CLAVE: Activa el modo Flexbox */
     width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
     align-items: center; /* Alinea las imágenes verticalmente (si tuvieran alturas diferentes) */
+    flex-wrap: wrap;
+}
+
+/* Media Query: Aplicar estas reglas solo si la pantalla es de 600px o menos */
+@media (max-width: 600px) {
+    
+    .gif img {
+        /* Ahora las imágenes ocupan el 48% (casi la mitad) del ancho */
+        flex-basis: 48%; 
+        max-width: 48%;
+        margin-bottom: 10px; /* Añade espacio entre las filas */
+    }
+    
+    /* Si quieres que se muestre 1 gato por fila en celulares pequeños, usa 100% */
+    /*
+    .gif img {
+        flex-basis: 100%; 
+        max-width: 100%;
+        margin-bottom: 10px; 
+    }
+    */
 }
 
 
@@ -275,11 +296,12 @@ nav a.item.active {
 @keyframes discoPartybg {
     /* 1. Cambio de Color en el FONDO y Rotación Suavizada */
     0%   { background-color: red; transform: rotate(0deg); }
-    14%  { background-color: orange; transform: rotate(2deg); } /* REDUCCIÓN: Inclinación derecha a 2 grados */
-    28%  { background-color: yellow; transform: rotate(-2deg); } /* REDUCCIÓN: Inclinación izquierda a -2 grados */
-    42%  { background-color: green; transform: rotate(2deg); }
-    56%  { background-color: cyan; transform: rotate(-2deg); }
-    70%  { background-color: blue; transform: rotate(2deg); }
-    84%  { background-color: magenta; transform: rotate(-2deg); }
+    14%  { background-color: orange; transform: rotate(0.5deg); } /* REDUCCIÓN: Inclinación derecha a 2 grados */
+    28%  { background-color: yellow; transform: rotate(-0.5deg); } /* REDUCCIÓN: Inclinación izquierda a -2 grados */
+    42%  { background-color: green; transform: rotate(0.5deg); }
+    56%  { background-color: cyan; transform: rotate(-0.5deg); }
+    70%  { background-color: blue; transform: rotate(0.5deg); }
+    84%  { background-color: magenta; transform: rotate(-0.5deg); }
     100% { background-color: red; transform: rotate(0deg); } /* Regresa a posición inicial */
 }
+
