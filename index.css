@@ -211,3 +211,75 @@ nav a.item.active {
     /* 2. ANULACIÓN DE COLOR */
     color: black; /* Esto evita que el texto del enlace sea el azul por defecto */
 }
+
+.imgmax {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 475px;
+    border: 5px solid black;
+    display: block;
+    border-radius: 5px;
+}
+
+.gif {
+    background-color: white;
+    display: flex; /* CAMBIO CLAVE: Activa el modo Flexbox */
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea las imágenes verticalmente (si tuvieran alturas diferentes) */
+}
+
+
+.gif img {
+    width: 75px;
+    /* Propiedades de la animación */
+    animation-name: discoParty; 
+    animation-duration: 1.5s; /* Más rápido para un efecto disco */
+    animation-timing-function: linear; /* Cambio de color uniforme */
+    animation-iteration-count: infinite;
+    
+    /* Necesario para que la rotación se vea bien */
+    transform-origin: 50% 100%; /* Rota desde la base de la imagen */
+       
+    /* Añade o ajusta el borde base aquí para que el color cambie después */
+    border: 5px solid white; /* Por ejemplo: un borde blanco de 5px */
+    
+}
+
+.backbody {
+    
+    /* CAMBIO DEL NOMBRE DE LA ANIMACIÓN */
+    animation-name: discoPartybg; 
+    
+    animation-duration: 1.5s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite;
+    transform-origin: 50% 100%; 
+}
+
+/* DEFINICIÓN DE LA ANIMACIÓN DE FIESTA DISCO */
+@keyframes discoParty {
+    /* 1. Cambio de Color en el Borde */
+    0%   { border-color: red; transform: rotate(0deg); }
+    14%  { border-color: orange; transform: rotate(5deg); } /* Inclinación derecha */
+    28%  { border-color: yellow; transform: rotate(-5deg); } /* Inclinación izquierda */
+    42%  { border-color: green; transform: rotate(5deg); }
+    56%  { border-color: cyan; transform: rotate(-5deg); }
+    70%  { border-color: blue; transform: rotate(5deg); }
+    84%  { border-color: magenta; transform: rotate(-5deg); }
+    100% { border-color: red; transform: rotate(0deg); } /* Regresa a posición inicial */
+}
+
+@keyframes discoPartybg {
+    /* 1. Cambio de Color en el FONDO y Rotación Suavizada */
+    0%   { background-color: red; transform: rotate(0deg); }
+    14%  { background-color: orange; transform: rotate(2deg); } /* REDUCCIÓN: Inclinación derecha a 2 grados */
+    28%  { background-color: yellow; transform: rotate(-2deg); } /* REDUCCIÓN: Inclinación izquierda a -2 grados */
+    42%  { background-color: green; transform: rotate(2deg); }
+    56%  { background-color: cyan; transform: rotate(-2deg); }
+    70%  { background-color: blue; transform: rotate(2deg); }
+    84%  { background-color: magenta; transform: rotate(-2deg); }
+    100% { background-color: red; transform: rotate(0deg); } /* Regresa a posición inicial */
+}
