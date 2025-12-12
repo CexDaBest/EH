@@ -97,6 +97,22 @@
     height: auto;       /* se ajusta al contenido */
 }
 
+.channelink {
+    color: lawngreen !important;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    font-size: large;
+}
+
+/* Añade un margen en la parte inferior de cada ítem de la lista */
+.lista li {
+    margin-bottom: 20px; /* Puedes ajustar este valor (20px) para más o menos espacio */
+    /* Otros estilos de la lista si los tienes, como list-style: none; */
+}
+
+.URL {
+    
+}
+
 nav {
     display: flex;
     justify-content: space-evenly; /* Distribuye los links */
@@ -138,9 +154,15 @@ nav a.item.active {
 }
 
 .mitmg {
-    float: right;
-    padding: 5px;
-    width: 250px;
+    /* CAMBIO CLAVE: Usa display: block para que margin: auto funcione */
+    display: block;
+    
+    /* Centrado horizontal: el atajo para margin-left: auto; y margin-right: auto; */
+    margin-left: auto; 
+    margin-right: auto;
+    
+    padding: 15px;
+    width: 250px; /* Es crucial que el ancho esté definido */
 }
 
 .cancdesc {
@@ -172,4 +194,20 @@ nav a.item.active {
 
 .songlist {
     font-weight: bold;
+}
+
+.fa-youtube {
+    /* ... (Mantenemos tus otros estilos de centrado) ... */
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    
+    /* 1. ANULACIÓN DE SUBRAYADO */
+    text-decoration: none !important; /* Usar !important para asegurar que se aplica (Último recurso, pero efectivo) */
+    
+    /* 2. ANULACIÓN DE COLOR */
+    color: black; /* Esto evita que el texto del enlace sea el azul por defecto */
 }
