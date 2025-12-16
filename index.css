@@ -123,6 +123,7 @@ nav {
     overflow: hidden;
     padding: 10px 20px;
     flex-wrap: nowrap;             /* evita que se vayan hacia abajo */
+    height: auto;
 }
 
 nav .item {
