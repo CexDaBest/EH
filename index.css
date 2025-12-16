@@ -13,15 +13,11 @@
     margin-right: auto;
     overflow: hidden;
     padding: 20px;
+    font-weight: bolder;
 }
 
 .lista li::marker {
     color: lightskyblue;
-}
-
-.lista li a {
-    text-decoration: none;
-    color: black;
 }
 
 /* Centrar el contenedor principal de los enlaces (la lista <ul>) */
@@ -109,6 +105,12 @@
     /* Otros estilos de la lista si los tienes, como list-style: none; */
 }
 
+.descimg {
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 nav {
     display: flex;
@@ -380,4 +382,44 @@ nav a.item.active {
     
     /* 4. Asegurar que las imágenes llenen el espacio correctamente */
     box-sizing: border-box; /* Incluye padding y border dentro del ancho y alto */
+}
+
+.URL {
+    color: red;
+    text-decoration: underline;
+}
+
+.blogcom {
+    background-color: rgb(255, 174, 144);
+    display: inline-block;
+    border-radius: 5px ;
+    padding: 3px;
+}
+
+.bloghr {
+    border: 1px solid black;
+    width: 100%;
+}
+
+details details {
+    margin-left: 20px;
+}
+
+.sumtitle {
+    font-size: larger;
+    background-color: rgb(255, 164, 164);
+    height: 130%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.sumitem {
+    background-color: rgb(255, 226, 226);
+    height: 130%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.sumitem p {
+    margin-left: 20px;
 }
