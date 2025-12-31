@@ -1,0 +1,2 @@
+Bob esponja triste emoji:
+    <img src="Images/sad-spongebob.png" class="sad-bob">

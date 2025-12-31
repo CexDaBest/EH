@@ -113,28 +113,61 @@
 }
 
 nav {
-    display: flex;
-    justify-content: space-evenly; /* distribuye los links en horizontal */
-    align-items: center;           /* centra verticalmente los enlaces */
     background-color: lightskyblue;
     border-radius: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    padding: 10px 20px;
-    flex-wrap: nowrap;             /* evita que se vayan hacia abajo */
-    height: auto;
+    margin: auto;
+    height: 50px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+nav div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
 }
 
 nav .item {
     text-decoration: none;
+    padding: 10px;
     color: black;
-    margin: 0 10px;                /* margen horizontal */
 }
 
 nav .item:hover:not(.active) {
     color: white;
     font-weight: bold;
+}
+
+/* La altura de la barra de desplazamiento */
+nav::-webkit-scrollbar {
+    height: 12px;
+}
+
+/* El fondo de la barra de desplazamiento */
+nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Al tocar con el dedo/clickear la barra de desplazamiento */
+nav::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 10px;
+}
+
+/* Al mover el dedo/mouse por encima de la barra de desplazamiento */
+nav::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 255);
+}
+
+nav a.item.active {
+    color: whitesmoke;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 .blurbox {
@@ -144,13 +177,6 @@ nav .item:hover:not(.active) {
     padding: 25px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-}
-
-nav a.item.active {
-    color: whitesmoke;
-    font-size: 25px;
-    font-weight: bold;
-    border-radius: 5px;
 }
 
 .mitmg {
@@ -423,4 +449,47 @@ details details {
 
 .sumitem p {
     margin-left: 20px;
+}
+
+.updatetab {
+    list-style: none;
+    background-image: linear-gradient(45deg, rgb(187, 207, 245), rgb(238, 244, 255));
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+    list-style-position: inside;
+}
+
+.updatetab li::before {
+    content: "✦";
+    color: #000000; /* Dorado brillante */
+    margin-right: 12px;
+    font-size: 1.2em;
+}
+
+.badge-new {
+    background-color: #ff4757; /* Un rojo vibrante */
+    color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.horizontaline {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, rgb(0, 0, 0), transparent);
+}
+
+.sad-bob {
+    height: 1.22em; /* Esto hace que mida lo mismo que el texto */
+    width: auto;
+    vertical-align: middle; /* Para que no flote arriba del texto */
+    margin: 2px; /* Un pequeño espacio a los lados */
 }
